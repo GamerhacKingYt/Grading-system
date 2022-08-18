@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function total(){
+    var sub1=parseInt(document.getElementById("bng").value);
+    var sub2=parseInt(document.getElementById("bng1").value);
+    var sub3=parseInt(document.getElementById("eng").value);
+    var sub4=parseInt(document.getElementById("eng1").value);
+    var sub5=parseInt(document.getElementById("ict").value);
+    var sub6=parseInt(document.getElementById("acn").value);
+    var sub7=parseInt(document.getElementById("acn1").value);
+    var sub8=parseInt(document.getElementById("fin").value);
+    var sub9=parseInt(document.getElementById("fin1").value);
+    var sub10=parseInt(document.getElementById("mrk").value);
+    var sub11=parseInt(document.getElementById("mng").value);
+
+    if(sub1>100 || sub2>100 || sub3>100 || sub4>100 || sub5>100 || sub6>100 || sub7>100 || sub8>100 || sub9>100 || sub10>100 || sub10>100){
+        alert("Please Enter Mark in Range of 100")
+    }
+    else{
+        var total = sub1 + sub2 + sub3 + sub4 + sub5 + sub6 + sub7 + sub8 + sub9 + sub10 + sub11;
+        document.getElementById("total").innerHTML = "Bangla-1st paper marks : "+sub2+ " <br> Bangla-2nd paper marks : "+sub3+" <br> English-1st paper marks : "+sub4+ " <br> English-2nd paper marks : "+sub5+ " <br> ICT marks : "+sub6+ " <br> Accounting-1st paper marks : "+sub7+ " <br> Accounting-2nd paper marks : "+sub8+ " <br> Finance-1st paper marks : "+sub9+ " <br> Finance-2nd paper marks : "+sub10+ " <br> Marketing marks : "+sub11+ " <br> Business Management marks : "+sub1+"<br>            </br> Total marks"+total;
+    }
+}
+function Average(){
+    var sub1=parseInt(document.getElementById("bng").value);
+    var sub2=parseInt(document.getElementById("bng1").value);
+    var sub3=parseInt(document.getElementById("eng").value);
+    var sub4=parseInt(document.getElementById("eng1").value);
+    var sub5=parseInt(document.getElementById("ict").value);
+    var sub6=parseInt(document.getElementById("acn").value);
+    var sub7=parseInt(document.getElementById("acn1").value);
+    var sub8=parseInt(document.getElementById("fin").value);
+    var sub9=parseInt(document.getElementById("fin1").value);
+    var sub10=parseInt(document.getElementById("mrk").value);
+    var sub11=parseInt(document.getElementById("mng").value);
+
+    if(sub1>100 || sub2>100 || sub3>100 || sub4>100 || sub5>100 || sub6>100 || sub7>100 || sub8>100 || sub9>100 || sub10>100 || sub10>100){
+        alert("Please Enter Mark in Range of 100")
+    }
+    else{
+        var total = sub1 + sub2 + sub3 + sub4 + sub5 + sub6 + sub7 + sub8 + sub9 + sub10 + sub11;
+        var Ave=total/5;
+        document.getElementById("average").innerHTML = "your average mark is : "+ave;
+    }
+}
+function grade(){
+    var sub1=parseInt(document.getElementById("bng").value);
+    var sub2=parseInt(document.getElementById("bng1").value);
+    var sub3=parseInt(document.getElementById("eng").value);
+    var sub4=parseInt(document.getElementById("eng1").value);
+    var sub5=parseInt(document.getElementById("ict").value);
+    var sub6=parseInt(document.getElementById("acn").value);
+    var sub7=parseInt(document.getElementById("acn1").value);
+    var sub8=parseInt(document.getElementById("fin").value);
+    var sub9=parseInt(document.getElementById("fin1").value);
+    var sub10=parseInt(document.getElementById("mrk").value);
+    var sub11=parseInt(document.getElementById("mng").value);
+
+    if(sub1>100 || sub2>100 || sub3>100 || sub4>100 || sub5>100 || sub6>100 || sub7>100 || sub8>100 || sub9>100 || sub10>100 || sub10>100){
+        alert("Please Enter Mark in Range of 100")
+    }
+    else{
+        var total = sub1 + sub2 + sub3 + sub4 + sub5 + sub6 + sub7 + sub8 + sub9 + sub10 + sub11;
+        var Ave=total/5;
+
+        if(ave>=80 && ave<=100){
+            document.getElementById("grade").innerHTML = "Your grade is A+";
+        }
+        else if(ave>=70 && ave<80){
+            document.getElementById("grade").innerHTML = "Your grade is A";
+        }
+        else if(ave>=60 && ave<70){
+            document.getElementById("grade").innerHTML = "Your grade is A-";
+        }
+        else if(ave>=50 && ave<60){
+            document.getElementById("grade").innerHTML = "Your grade is B";
+        }
+        else if(ave>=40 && ave<50){
+            document.getElementById("grade").innerHTML = "Your grade is C";
+        }
+        else if(ave>=30 && ave<40){
+            document.getElementById("grade").innerHTML = "Your grade is D";
+        }
+        else{
+            document.getElementById("grade").innerHTML = "Your grade is F";
+        }
+    }
+}
+    </script>
+</head>
+<body>
+    <div id="main">
+        <div id="head"><h1>Grading System</h1></div>
+        <label>Bangla-1st paper</label> <input type="text" id="bng"> <br>
+        <label>Bangla-2nd paper</label> <input type="text" id="bng1"> <br>
+        <label>English-1st paper</label> <input type="text" id="eng"> <br>
+        <label>English-2nd paper</label> <input type="text" id="eng1"> <br>
+        <label>ICT</label> <input type="text" id="ict"> <br>
+        <label>Accounting-1st paper</label> <input type="text" id="acn"> <br>
+        <label>Accounting-2nd paper</label> <input type="text" id="acn1"> <br>
+        <label>Finance-1st paper</label> <input type="text" id="fin"> <br>
+        <label>Finance-2nd paper</label> <input type="text" id="fin1"> <br>
+        <label>Marketing</label> <input type="text" id="mrk"> <br>
+        <label>Business Management</label> <input type="text" id="mng"> <br>
+        <hr>
+
+        <button class="btn1">Total</button>
+        <button class="btn2">Averrage</button>
+        <button class="btn3">grade</button>
+    </div>
+
+    <div id="result">
+        <div id="head1"><h1>Total</h1></div>
+        <div id="total">
+
+        </div>
+        <div id="head2"><h1>Average</h1></div>
+        <div id="ave">
+
+        </div>
+        <div id="head3"><h1>Grade</h1></div>
+        <div id="grade">
+
+        </div>
+    </div>
+</body>
+</html>
